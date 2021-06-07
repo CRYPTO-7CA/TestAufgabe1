@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.Device
+
+@{
+    ViewBag.Title = "Device";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/css/devices.css" type="text/css" />
+
+</head>
+
+<b>Gerät @Model.name</b>
+<sub>@Model.deviceTypeId</sub>
+<button class="btn-float-right" onclick="GoToDevices()">⪡ Zurück</button>
+
+<div class="device-container">
+    <table class="table-device">
+        <tr>
+            <td>
+                <p>Failsafe</p>
+            </td>
+            <td>
+                <p>@Model.failsafe</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Temperatur</p>
+            </td>
+            <td>
+                <p>@Model.tempMin - @Model.tempMax °C</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Einbauposition</p>
+            </td>
+            <td>
+                <p>@Model.installationPosition</p>
+            </td>
+        </tr>
+    </table>
+</div>

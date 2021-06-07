@@ -1,0 +1,41 @@
+﻿@using WebApplication1.Models
+@model WebApplication1.ViewModels.DevicesViewModel
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/css/devices.css" type="text/css" />
+</head>
+
+<h2>Alle Geräte</h2>
+<button class="btn-float-right">Geräte hinzufügen</button>
+
+<div class="dashboard">
+    @if (Model.Devices.Count > 0)
+    {
+        @foreach (var device in Model.Devices)
+        {
+            <div class="dashboard-container">
+                <button class="btn-float-right">DEL</button>
+                <p>
+                    <a asp-area="" asp-controller="Devices" asp-action="Device">@device.name</a>
+                </p>
+                <p>@device.deviceTypeId</p>
+                <p>
+                    Failsafe:
+                    @if (device.failsafe)
+                    {<span>✔</span> }
+                    else
+                    { <span>❌</span>}
+                </p>
+            </div>
+        }
+    }
+    else
+    {
+        <h4>Keine Geräte vorhanden</h4>
+    }
+
+</div>

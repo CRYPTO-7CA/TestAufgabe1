@@ -1,0 +1,58 @@
+div.dashboard {
+  display: flex;
+  width: 80%;
+  #justify-content: space-around;
+  border: 3px dotted blue;
+  flex-wrap: wrap;
+}
+
+div.dashboard-container {
+  border: 3px outset;
+  background-color: rgb(233, 236, 217);
+  margin: 10px;
+  padding: 10px;
+  flex-grow: 1;
+  width: 250px;
+  max-width: 250px;
+}
+
+div.device-container {
+  margin-top: 25px;
+  border: solid #000 2px;
+}
+
+.btn-float-right {
+  float: right;
+}
+
+/*
+Tables styles von w3schools "ausgeliehen"
+
+https://www.w3schools.com/Css/tryit.asp?filename=trycss_table_fancy
+*/
+table.table-device {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
